@@ -17,6 +17,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/server-workspace/tsconfig.app.json"
       }
+    },
+    "db": {
+      "type": "library",
+      "root": "libs/db",
+      "entryFile": "index",
+      "sourceRoot": "libs/db/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/db/tsconfig.lib.json"
+      }
     }
   }
 }
