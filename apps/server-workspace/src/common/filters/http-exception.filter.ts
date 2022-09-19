@@ -13,14 +13,14 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
     const status = exception.getStatus();
+    // 获取自定义异常描述信息
     const exceptionRes: any = exception.getResponse();
-    const { error, message } = exceptionRes;
+    const { message } = exceptionRes;
 
     response.status(status).json({
-      statusCode: status,
+      code: status,
       timestamp: new Date().toISOString(),
       path: request.url,
-      error,
       message,
     });
   }

@@ -12,7 +12,7 @@ import { DbService } from './db.service';
       password: 'root123', // 自定义
       database: 'server_workspace',
       entities: [],
-      synchronize: true,
+      synchronize: false, // 同步数据库数据
       charset: 'utf8mb4', // 设置chatset编码为utf8mb4
     }),
   ],
